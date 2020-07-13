@@ -61,7 +61,7 @@ def padder(img, aspect_ratio):
     else:
         return img
         
-for root, dirs, files in os.walk('.'):
+for root, dirs, files in os.walk(sys.arg[2]):
     for filename in files:
         if filename.endswith(('.jpg', '.jpeg', '.png', '.JPEG')):
             resize_it(filename)
